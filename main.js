@@ -1,4 +1,4 @@
-//JS fundamental 1
+console.log("JS fundamental 1");
 function calculateBMI(mass, height){
     return mass / height ** 2;
 }
@@ -52,3 +52,38 @@ var total = billValue + tip;
 console.log("bill value:", billValue);
 console.log("tip:", tip);
 console.log("total:", total);
+
+console.log("JS fundamental 2");
+console.log("challenge 1")
+function checkWinner(avgDolphins, avgKoalas){
+    if(avgDolphins >= avgKoalas * 2)
+        console.log("Dohpins win!");
+    else if(avgKoalas >= avgDolphins * 2)
+        console.log("Koalas win!");
+}
+
+checkWinner(dolphinsAvg, koalasAvg);
+
+console.log("challenge 2");
+bills = [125, 555, 44];
+tips = [];
+total = [];
+
+function calculate(bills){
+    bills.forEach(v => {
+        let tip = (v >= 50 && v <= 300) ? v * 15 / 100 : v * 20 / 100;
+        tips.push(tip);
+        total.push(v + tip);
+    });
+}
+
+calculate(bills);
+
+console.log("bill list:");
+bills.forEach(i => {console.log(i)})
+
+console.log("tip list:");
+tips.forEach(i => {console.log(i)})
+
+console.log("total list:");
+total.forEach(i => {console.log(i)})
