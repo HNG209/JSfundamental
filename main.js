@@ -88,24 +88,49 @@ console.log("JS fundamental 2");
 // console.log("total list:");
 // total.forEach(i => {console.log(i)})
 
-console.log("challenge 3");
+// console.log("challenge 3");
 
-const obj1 = {
-    fullname: "Mark Miller",
-    mass: 78,
-    height: 1.69
+// const obj1 = {
+//     fullname: "Mark Miller",
+//     mass: 78,
+//     height: 1.69
+// }
+
+// const obj2 = {
+//     fullname: "John Smith",
+//     mass: 92,
+//     height: 1.95
+// }
+
+// function calcBMI(obj){
+//     return obj.mass / obj.height ** 2;
+// }
+
+// if(calcBMI(obj1) > calcBMI(obj2))
+//     console.log("Mark's BMI(", calcBMI(obj1) ,")is higher than John's(", calcBMI(obj2), ")!")
+// else console.log("John's BMI(", calcBMI(obj2) ,")is higher than Mark's(", calcBMI(obj1), ")!")
+
+console.log("challenge 4")
+
+bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tips = [];
+totals = [];
+
+function calcTip(v){
+    let tip = (v >= 50 && v <= 300) ? v * 15 / 100 : v * 20 / 100;
+    tips.push(tip);
+    totals.push(v + tip);
 }
 
-const obj2 = {
-    fullname: "John Smith",
-    mass: 92,
-    height: 1.95
-}
+bills.forEach(element => {
+    calcTip(element);
+});
 
-function calcBMI(obj){
-    return obj.mass / obj.height ** 2;
-}
+console.log("bill list:");
+bills.forEach(i => {console.log(i)})
 
-if(calcBMI(obj1) > calcBMI(obj2))
-    console.log("Mark's BMI(", calcBMI(obj1) ,")is higher than John's(", calcBMI(obj2), ")!")
-else console.log("John's BMI(", calcBMI(obj2) ,")is higher than Mark's(", calcBMI(obj1), ")!")
+console.log("tip list:");
+tips.forEach(i => {console.log(i)})
+
+console.log("total list:");
+totals.forEach(i => {console.log(i)})
